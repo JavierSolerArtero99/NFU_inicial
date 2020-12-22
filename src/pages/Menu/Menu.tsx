@@ -33,23 +33,34 @@ import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
 
 /* Theme variables */
-import "./theme/variables.css";
 import { home, logIn } from "ionicons/icons";
-import Home from "./pages/Home/Home";
-import Login from "./pages/Login/Login";
-import Menu from "./pages/Menu/Menu";
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <Menu />
-
-      <IonRouterOutlet id="scheduleAppM1">
-        <Route path="/home" component={Home} exact />
-        <Route path="/login" component={Login} exact />
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
+const Menu: React.FC = () => (
+  <IonMenu contentId="scheduleAppM1">
+    <IonHeader>
+      <IonToolbar>
+        <IonTitle>NFU</IonTitle>
+      </IonToolbar>
+    </IonHeader>
+    <IonContent>
+      <IonList>
+        <IonMenuToggle>
+          <IonItem routerLink="/home" routerDirection="none" lines="none">
+            <IonIcon color="medium" slot="start" icon={home} />
+            <IonLabel>Home</IonLabel>
+          </IonItem>
+        </IonMenuToggle>
+      </IonList>
+      <IonList>
+        <IonMenuToggle>
+          <IonItem routerLink="/login" routerDirection="none" lines="none">
+            <IonIcon color="medium" slot="start" icon={logIn} />
+            <IonLabel>Login</IonLabel>
+          </IonItem>
+        </IonMenuToggle>
+      </IonList>
+    </IonContent>
+  </IonMenu>
 );
 
-export default App;
+export default Menu;
