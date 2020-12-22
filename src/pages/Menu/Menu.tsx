@@ -50,6 +50,12 @@ const Menu: React.FC = () => (
             <IonLabel>Home</IonLabel>
           </IonItem>
         </IonMenuToggle>
+        <IonMenuToggle>
+          <IonItem routerLink="/match" routerDirection="none" lines="none">
+            <IonIcon color="medium" slot="start" icon={home} />
+            <IonLabel>Match</IonLabel>
+          </IonItem>
+        </IonMenuToggle>
       </IonList>
       <IonList>
         <IonMenuToggle>

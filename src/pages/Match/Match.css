@@ -1,0 +1,13 @@
+.buttonsContainer{
+    padding-bottom: 1rem;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+}
+
+.changeButton {
+    text-align: center;
+    width: 25%;
+}

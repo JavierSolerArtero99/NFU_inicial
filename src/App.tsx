@@ -34,10 +34,10 @@ import "@ionic/react/css/display.css";
 
 /* Theme variables */
 import "./theme/variables.css";
-import { home, logIn } from "ionicons/icons";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Menu from "./pages/Menu/Menu";
+import Match from "./pages/Match/Match";
 
 const App: React.FC = () => (
   <IonApp>
@@ -47,6 +47,7 @@ const App: React.FC = () => (
       <IonRouterOutlet id="scheduleAppM1">
         <Route path="/home" component={Home} exact />
         <Route path="/login" component={Login} exact />
+        <Route path="/match" component={Match} exact />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>

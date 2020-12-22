@@ -1,57 +1,78 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import {
-  IonPage,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
-  IonContent,
-  IonGrid,
   IonButtons,
-  IonMenuButton,
-  IonRow,
-  IonCol,
   IonCard,
+  IonCardContent,
   IonCardHeader,
   IonCardSubtitle,
   IonCardTitle,
-  IonCardContent,
-  IonItem,
-  IonButton,
-  IonModal,
-  IonIcon,
+  IonContent,
+  IonHeader,
+  IonLoading,
+  IonMenuButton,
+  IonPage,
+  IonSearchbar,
+  IonSlide,
+  IonSlides,
+  IonTitle,
+  IonToolbar,
 } from "@ionic/react";
-import ActivitiesContext, { Activity } from "../../data/activities-context";
-import classes from "./AllActivities.module.css";
-import CompleteModalActivity from "../../components/CompleteActivityModal";
-import { checkmarkOutline } from "ionicons/icons";
+import "./Home.css";
 
-const Home: React.FC = () => {
+interface IProps {}
 
-  return (
-    // <React.Fragment>
-    //   <IonModal isOpen={!!activityToComplete}>
-    //     <CompleteModalActivity
-    //       activity={activityToComplete as Activity}
-    //       dismissModal={closeModal}
-    //     />
-    //   </IonModal>
+interface IState {
+  loading?: boolean;
+}
 
+class Home extends React.Component<IProps, IState> {
+  constructor(props: Readonly<IProps>) {
+    super(props);
+    this.state = {
+      loading: true,
+    };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        ...this.state,
+        loading: false,
+      });
+    }, 1000);
+  }
+
+  render() {
+    return this.state.loading ? (
+      <IonLoading cssClass="my-custom-class" isOpen={true} />
+    ) : (
       <IonPage>
-        <IonHeader>
-          <IonToolbar>
-            <IonButtons slot="start">
-              <IonMenuButton />
-            </IonButtons>
-            <IonTitle>Home</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+        <IonToolbar>
+          <IonButtons slot="start">
+            <IonMenuButton></IonMenuButton>
+          </IonButtons>
+          <IonTitle>Home</IonTitle>
+        </IonToolbar>
+
         <IonContent>
-            <p>hhh</p>
-          
+          <IonHeader collapse="condense"></IonHeader>
+          <IonSearchbar></IonSearchbar>
+          <IonSlides>
+            <IonSlide key={1}>
+              <IonCard key={"col_" + 1}>
+                <IonCardHeader>
+                  <IonCardSubtitle>Subtitle</IonCardSubtitle>
+                  <IonCardTitle>Title</IonCardTitle>
+                </IonCardHeader>
+
+                <IonCardContent></IonCardContent>
+              </IonCard>
+            </IonSlide>
+          </IonSlides>
         </IonContent>
-      </IonPage>)
-    {/* </React.Fragment> */}
-  ;
-};
+      </IonPage>
+    );
+  }
+}
 
 export default Home;
