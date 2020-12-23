@@ -56,8 +56,6 @@ const Menu: React.FC = () => (
             <IonLabel>Match</IonLabel>
           </IonItem>
         </IonMenuToggle>
-      </IonList>
-      <IonList>
         <IonMenuToggle>
           <IonItem routerLink="/login" routerDirection="none" lines="none">
             <IonIcon color="medium" slot="start" icon={logIn} />
