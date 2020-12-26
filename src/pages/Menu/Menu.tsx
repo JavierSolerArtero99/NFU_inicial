@@ -13,6 +13,7 @@ import {
   IonIcon,
   IonLabel,
   IonMenuToggle,
+  IonImg,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 
@@ -33,16 +34,17 @@ import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
 
 /* Theme variables */
-import { home, logIn } from "ionicons/icons";
+import { home, logIn, football, map, pin, people } from "ionicons/icons";
 
 const Menu: React.FC = () => (
-  <IonMenu contentId="scheduleAppM1">
+  <IonMenu contentId="NFU_Navigation">
     <IonHeader>
       <IonToolbar>
         <IonTitle>NFU</IonTitle>
       </IonToolbar>
     </IonHeader>
     <IonContent>
+      <IonImg src={""} />
       <IonList>
         <IonMenuToggle>
           <IonItem routerLink="/home" routerDirection="none" lines="none">
@@ -60,6 +62,22 @@ const Menu: React.FC = () => (
           <IonItem routerLink="/login" routerDirection="none" lines="none">
             <IonIcon color="medium" slot="start" icon={logIn} />
             <IonLabel>Login</IonLabel>
+          </IonItem>
+        </IonMenuToggle>
+        <IonMenuToggle>
+          <IonItem routerLink="/profile" routerDirection="none" lines="none">
+            <IonIcon color="medium" slot="start" icon={logIn} />
+            <IonLabel>Profile</IonLabel>
+          </IonItem>
+        </IonMenuToggle>
+        <IonMenuToggle>
+          <IonItem
+            routerLink="/instalations"
+            routerDirection="none"
+            lines="none"
+          >
+            <IonIcon color="medium" slot="start" icon={pin} />
+            <IonLabel>Instalations</IonLabel>
           </IonItem>
         </IonMenuToggle>
       </IonList>
