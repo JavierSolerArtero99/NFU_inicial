@@ -1,0 +1,62 @@
+.Card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  height: 50%;
+  width: 85%;
+  border-radius: 25px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(166, 173, 201, 0.2);
+}
+
+.halfCardTop {
+  background-color: #397ffc;
+  height: 25%;
+  width: 100%;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.halfCardTopInside {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.halfCardBot {
+  background-color: #397ffc;
+  height: 75%;
+  width: 100%;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 30px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.IconContainer {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 100px;
+  align-items: center;
+  background-color: #397ffc;
+  height: 6rem;
+  width: 6rem;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(166, 173, 201, 0.2);
+}
+
+h2{
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+  text-transform: uppercase;
+}

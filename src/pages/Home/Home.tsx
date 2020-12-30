@@ -8,6 +8,7 @@ import {
   IonCardTitle,
   IonContent,
   IonHeader,
+  IonList,
   IonLoading,
   IonMenuButton,
   IonPage,
@@ -18,6 +19,7 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import "./Home.css";
+import MatchCard from "./MatchCard";
 
 interface IProps {}
 
@@ -57,18 +59,9 @@ class Home extends React.Component<IProps, IState> {
         <IonContent>
           <IonHeader collapse="condense"></IonHeader>
           <IonSearchbar></IonSearchbar>
-          <IonSlides>
-            <IonSlide key={1}>
-              <IonCard key={"col_" + 1}>
-                <IonCardHeader>
-                  <IonCardSubtitle>Subtitle</IonCardSubtitle>
-                  <IonCardTitle>Title</IonCardTitle>
-                </IonCardHeader>
-
-                <IonCardContent></IonCardContent>
-              </IonCard>
-            </IonSlide>
-          </IonSlides>
+          <IonList className="CardsContainer">
+            <MatchCard />
+          </IonList>
         </IonContent>
       </IonPage>
     );
