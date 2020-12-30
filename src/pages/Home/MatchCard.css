@@ -1,5 +1,5 @@
 .Card {
-  background-color: white;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/000/463/336/non_2x/vector-seamless-sports-pattern-background.jpg");
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
@@ -19,7 +19,7 @@
 }
 
 .halfCardTopInside {
-  background-color: white;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/000/463/336/non_2x/vector-seamless-sports-pattern-background.jpg");
   height: 100%;
   width: 100%;
   border-bottom-left-radius: 30px;

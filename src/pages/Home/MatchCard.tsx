@@ -5,10 +5,14 @@ import "./MatchCard.css";
 
 const MatchCard: React.FC = () => (
   <div className="Card">
+    <div className="image"></div>
     <div className="halfCardTop">
       <div className="halfCardTopInside">
         <div className="IconContainer">
-          <IonIcon style={{ color:"white", fontSize: "2.3rem" }} icon={basketball} />
+          <IonIcon
+            style={{ color: "white", fontSize: "2.3rem" }}
+            icon={basketball}
+          />
         </div>
       </div>
     </div>
